@@ -41,13 +41,10 @@
 	}
 }
 @media (width < 660px) {
-	body {
-		background-color: gold;
-	}
 	.main {
 		.form {
 			position: sticky;
-			top: -20rem;
+			top: -15rem;
 			background-color: hsl(0 0% 66% / 0.8);
 			.controls {
 				grid-template-areas:
