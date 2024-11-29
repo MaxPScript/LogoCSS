@@ -1,0 +1,101 @@
+@media (width < 992px) {
+	.main {
+		display: grid;
+		gap: 1rem;
+		padding: 1rem;
+		grid-template-areas:
+			"header header "
+			"form form"
+			"view view";
+		grid-template-columns: 1fr 1fr;
+		grid-template-rows: max-content auto;
+		.header {
+			h2 {
+				padding-inline: 0.5rem;
+			}
+		}
+		.form {
+			grid-template-areas:
+				"reference"
+				"header"
+				"controls";
+			grid-template-columns: 1fr;
+			grid-template-rows: max-content auto auto;
+			.controls {
+				.radio_group {
+					label {
+						input,
+						> span {
+							grid-area: 1/1/2/2;
+						}
+						input {
+							height: 1.5rem;
+						}
+					}
+				}
+			}
+			.reference {
+				grid-area: reference;
+			}
+		}
+	}
+}
+@media (width < 660px) {
+	body {
+		background-color: gold;
+	}
+	.main {
+		.form {
+			position: sticky;
+			top: -20rem;
+			background-color: hsl(0 0% 66% / 0.8);
+			.controls {
+				grid-template-areas:
+					"span"
+					"letter"
+					"radio";
+				grid-template-columns: 1fr;
+				grid-template-rows: auto auto auto;
+				.controls_input {
+					flex-wrap: wrap;
+					gap: 1rem;
+					text-align: initial;
+					label {
+						width: 100%;
+						display: flex;
+						justify-content: space-between;
+						padding-inline: 8vw;
+					}
+				}
+				.radio_group {
+					label {
+						> span {
+							grid-area: 1/2/2/3;
+						}
+					}
+				}
+			}
+		}
+		.view {
+			grid-template-areas:
+				"regular"
+				"festive"
+				"light"
+				"dark";
+			grid-template-columns: 1fr;
+		}
+	}
+}
+@media (width < 400px) {
+	.main {
+		.form {
+			.controls {
+				.controls_input {
+					label {
+						padding-inline: 0vw;
+					}
+				}
+			}
+		}
+	}
+}
