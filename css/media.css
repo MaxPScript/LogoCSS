@@ -22,11 +22,10 @@
 			grid-template-columns: 1fr;
 			grid-template-rows: max-content auto auto;
 			.controls {
-				.radio_group {
+				.checkbox_group {
 					label {
 						input,
 						> span {
-							grid-area: 1/1/2/2;
 						}
 						input {
 							height: 1.5rem;
@@ -44,7 +43,7 @@
 	.main {
 		.form {
 			position: sticky;
-			top: -15rem;
+			top: -17rem;
 			background-color: hsl(0 0% 66% / 0.8);
 			.controls {
 				grid-template-areas:
@@ -64,10 +63,9 @@
 						padding-inline: 8vw;
 					}
 				}
-				.radio_group {
+				.checkbox_group {
 					label {
 						> span {
-							grid-area: 1/2/2/3;
 						}
 					}
 				}
