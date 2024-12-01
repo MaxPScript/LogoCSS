@@ -6,7 +6,7 @@
 			name="viewport"
 			content="width=device-width, initial-scale=1.0"
 		/>
-		<title>CSS Official Logo Proposal</title>
+		<title>CSS Logo Proposal</title>
 		<link
 			rel="icon"
 			href="./assets/logo_css_regular.png"
@@ -16,16 +16,49 @@
 			rel="stylesheet"
 			href="./css/main.css"
 		/>
+		<!-- <link
+			rel="stylesheet"
+			href="./css/popover.css"
+		/> -->
 		<link
 			rel="stylesheet"
 			href="./css/media.css"
 		/>
 	</head>
 	<body>
+		<!-- <button popovertarget="mypopover"> -->
+		<!-- popovertargetaction="show" -->
+		<!-- Toggle popover -->
+		<!-- </button> -->
+		<!-- <button
+			popovertarget="mypopover"
+			popovertargetaction="hide"
+		>
+			Hide popover
+		</button> -->
+		<div
+			id="mypopover"
+			popover
+		>
+			Here is the official new logo for CSS, along with my proposal, which
+			features a Gothic-style, four-centered arc as the main design element.
+			<a href="https://github.com/MaxPScript/LogoCSS">See the README file</a>
+		</div>
 		<main class="main">
 			<header class="header">
-				<h1>CSS Official Logo Proposal</h1>
-				<h2>This presents a new angle on how to use shapes in CSS</h2>
+				<h1>CSS Logo Proposal</h1>
+				<h2>
+					This presents a new angle on how to use shapes in CSS&nbsp;
+					<button
+						popovertarget="mypopover"
+						aria-haspopup="true"
+					>
+						<img
+							src="./assets/info.svg"
+							alt="info icon"
+						/>
+					</button>
+				</h2>
 			</header>
 			<section class="form">
 				<h2>Play with values</h2>

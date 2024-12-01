@@ -37,6 +37,11 @@
 				grid-area: reference;
 			}
 		}
+		.view {
+			/* row-gap: 1vw; */
+			row-gap: 5vw;
+			padding-block: 5vw;
+		}
 	}
 }
 @media (width < 660px) {
@@ -78,6 +83,12 @@
 				"light"
 				"dark";
 			grid-template-columns: 1fr;
+			.regular,
+			.light,
+			.festive,
+			.dark {
+				margin: auto;
+			}
 		}
 	}
 }
