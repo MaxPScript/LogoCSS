@@ -58,6 +58,7 @@
 				.dimensions_presets_group {
 					display: flex;
 					justify-content: space-evenly;
+					column-gap: 1vw;
 					> div {
 						display: grid;
 						grid-template-columns: auto auto;
