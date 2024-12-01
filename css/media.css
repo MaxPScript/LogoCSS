@@ -24,9 +24,6 @@
 			.controls {
 				.checkbox_group {
 					label {
-						input,
-						> span {
-						}
 						input {
 							height: 1.5rem;
 						}
@@ -38,7 +35,6 @@
 			}
 		}
 		.view {
-			/* row-gap: 1vw; */
 			row-gap: 5vw;
 			padding-block: 5vw;
 		}
@@ -48,29 +44,30 @@
 	.main {
 		.form {
 			position: sticky;
-			top: -17rem;
+			top: -16rem;
 			background-color: hsl(0 0% 66% / 0.8);
 			.controls {
 				grid-template-areas:
-					"span"
-					"letter"
-					"radio";
+					"logo_styles_checkboxes"
+					"dimensions_presets";
 				grid-template-columns: 1fr;
 				grid-template-rows: auto auto auto;
 				.controls_input {
-					flex-wrap: wrap;
-					gap: 1rem;
-					text-align: initial;
-					label {
-						width: 100%;
-						display: flex;
-						justify-content: space-between;
-						padding-inline: 8vw;
-					}
+					display: none;
 				}
-				.checkbox_group {
-					label {
-						> span {
+				.dimensions_presets_group {
+					display: flex;
+					justify-content: space-evenly;
+					> div {
+						display: grid;
+						grid-template-columns: auto auto;
+						column-gap: 1vw;
+						row-gap: 2vw;
+						span {
+							grid-row: 1/4;
+						}
+						label {
+							padding: 1vw;
 						}
 					}
 				}
@@ -98,7 +95,6 @@
 			.controls {
 				.controls_input {
 					label {
-						padding-inline: 0vw;
 					}
 				}
 			}
