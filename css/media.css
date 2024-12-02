@@ -35,13 +35,22 @@
 			}
 		}
 		.view {
-			row-gap: 5vw;
-			padding-block: 5vw;
+			row-gap: 20px;
+			padding-block: 20px;
 		}
 	}
 }
 @media (width < 660px) {
 	.main {
+		display: grid;
+		grid-template-areas:
+			"header"
+			"form"
+			"view";
+		grid-template-columns: 1fr;
+		grid-template-rows: max-content auto 1020px;
+		/* gap: 1rem; */
+		/* padding: 1rem; */
 		.form {
 			position: sticky;
 			top: -16rem;
@@ -84,6 +93,7 @@
 			}
 		}
 		.view {
+			grid-area: view;
 			grid-template-areas:
 				"regular"
 				"festive"
@@ -92,7 +102,7 @@
 			grid-template-columns: 1fr;
 			/* grid-template-rows: auto auto; */
 			grid-template-rows: 230px 230px 230px 230px;
-			row-gap: 5vw;
+			row-gap: 20px;
 			.regular,
 			.light,
 			.festive,
