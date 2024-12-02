@@ -48,7 +48,7 @@
 			"form"
 			"view";
 		grid-template-columns: 1fr;
-		grid-template-rows: max-content auto 1020px;
+		grid-template-rows: max-content auto auto;
 		/* gap: 1rem; */
 		/* padding: 1rem; */
 		.form {
@@ -93,7 +93,7 @@
 			}
 		}
 		.view {
-			grid-area: view;
+			/* grid-area: view; */
 			grid-template-areas:
 				"regular"
 				"festive"

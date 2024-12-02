@@ -135,7 +135,7 @@ h2 {
 		grid-area: view;
 		display: grid;
 		/* gap: 1vw; */
-		padding: 1vw;
+		padding: 10px;
 		grid-template-areas:
 			"regular festive"
 			"light dark";
