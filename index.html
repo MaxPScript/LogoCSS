@@ -23,14 +23,20 @@
 	</head>
 	<body>
 		<div
-			id="mypopover"
+			id="mypopover_1"
 			popover
 		>
 			Here is the official
 			<a href="https://github.com/CSS-Next/logo.css">new logo for CSS</a>, along
 			with my proposal, which features a Gothic-style, four-centered arc as the
-			main design element.
-			<a href="https://github.com/MaxPScript/LogoCSS">See the README file</a>
+			main design element
+			<a href="https://github.com/MaxPScript/LogoCSS">See the README file.</a>
+		</div>
+		<div
+			id="mypopover_2"
+			popover
+		>
+			Check this project on desktop for better UX.
 		</div>
 		<main class="main">
 			<header class="header">
@@ -38,7 +44,7 @@
 				<h2>
 					This presents a new angle on how to use shapes in CSS&nbsp;
 					<button
-						popovertarget="mypopover"
+						popovertarget="mypopover_1"
 						aria-haspopup="true"
 					>
 						<img
@@ -49,7 +55,19 @@
 				</h2>
 			</header>
 			<section class="form">
-				<h2>Play with values</h2>
+				<h2>
+					Play with values&nbsp;
+
+					<button
+						popovertarget="mypopover_2"
+						aria-haspopup="true"
+					>
+						<img
+							src="./assets/info.svg"
+							alt="info icon"
+						/>
+					</button>
+				</h2>
 				<div class="controls">
 					<div class="controls_input">
 						<label for="span_line_width_id"
