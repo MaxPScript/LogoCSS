@@ -137,6 +137,7 @@ h2 {
 		/* gap: 1vw; */
 		padding: 10px;
 		grid-template-areas:
+			"test test"
 			"regular festive"
 			"light dark";
 		grid-template-columns: 1fr 1fr;
@@ -145,6 +146,9 @@ h2 {
 		grid-template-rows: 50% 50%;
 		/* grid-template-rows: 230px 230px; */
 		align-items: end;
+		.test {
+			grid-area: test;
+		}
 		> * {
 			/* border: 5px dashed hsl(35 50% 50% / 0.5); */
 			display: grid;

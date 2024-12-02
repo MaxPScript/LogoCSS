@@ -95,13 +95,14 @@
 		.view {
 			/* grid-area: view; */
 			grid-template-areas:
+				"test"
 				"regular"
 				"festive"
 				"light"
 				"dark";
 			grid-template-columns: 1fr;
-			/* grid-template-rows: auto auto; */
-			grid-template-rows: 230px 230px 230px 230px;
+			grid-template-rows: auto auto auto auto auto;
+			/* grid-template-rows: 230px 230px 230px 230px; */
 			row-gap: 20px;
 			.regular,
 			.light,
