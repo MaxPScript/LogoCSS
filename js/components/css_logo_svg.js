@@ -162,7 +162,7 @@ export function createLogo(logoValue, lettersValue, el, colors) {
 		} v${18.75 / k} a${18.75 / k} ${18.75 / k} 0 0 1 ${-18.75 / k} ${18.75 / k}
 		h${-62.5 / k} a${18.75 / k} ${18.75 / k} 0 0 1 ${-18.75 / k} ${-18.75 / k} z
 		"
-		style="transition: d 0.8s" fill="${colorsArray[1]}" ></path>
+		 fill="${colorsArray[1]}" ></path>
 		`;
 		el.insertAdjacentHTML("beforeend", pathTemplate);
 		// ************************************
@@ -250,7 +250,7 @@ export function createLogo(logoValue, lettersValue, el, colors) {
 		}
 		v${-42.52 / k} l${-65.625 / k}, ${-34.375 / k} z
 		"
-		style="transition: d 0.8s" fill="${colorsArray[1]}" ></path>
+		 fill="${colorsArray[1]}" ></path>
 		`;
 		el.insertAdjacentHTML("beforeend", pathTemplate);
 		// ************************************
@@ -337,7 +337,7 @@ export function createLogo(logoValue, lettersValue, el, colors) {
 		}
 		v${-42.52 / k} l${-65.625 / k}, ${-34.375 / k} z
 		"
-		style="transition: d 0.8s" fill="${colorsArray[1]}" ></path>
+		 fill="${colorsArray[1]}" ></path>
 		`;
 		el.insertAdjacentHTML("beforeend", pathTemplate);
 		// ************************************
