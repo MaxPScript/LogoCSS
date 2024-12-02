@@ -10,8 +10,10 @@
 	src: url("../assets/fonts/DINishPreviewCondensed-Heavy.ttf")
 		format("truetype");
 }
-img {
+img,
+svg {
 	display: block;
+	transition: all 0.5s;
 }
 [popover] {
 	width: 80%;
@@ -126,24 +128,29 @@ h2 {
 	.view {
 		grid-area: view;
 		display: grid;
-		gap: 1vw;
+		/* gap: 1vw; */
 		padding: 1vw;
 		grid-template-areas:
 			"regular festive"
 			"light dark";
 		grid-template-columns: 1fr 1fr;
-		grid-template-rows: auto auto;
+		/* grid-template-columns: 256px 256px; */
+		/* grid-template-rows: auto auto; */
+		grid-template-rows: 50% 50%;
+		/* grid-template-rows: 230px 230px; */
 		align-items: end;
 		> * {
 			/* border: 5px dashed hsl(35 50% 50% / 0.5); */
+			display: grid;
+			place-content: center;
 		}
 		.regular,
 		.light {
-			margin-left: calc((100% - 256px) * 2 / 3);
+			/* margin-left: calc((100% - 256px) * 2 / 3); */
 		}
 		.festive,
 		.dark {
-			margin-left: calc((100% - 256px) * 2 / 6);
+			/* margin-left: calc((100% - 256px) * 2 / 6); */
 		}
 	}
 }

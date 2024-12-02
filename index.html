@@ -60,7 +60,7 @@
 								value="256"
 								step="16"
 								min="128"
-								min="512"
+								max="256"
 							/>
 						</label>
 						<label for="letters_width_id"
@@ -68,7 +68,7 @@
 							<input
 								type="number"
 								id="letters_width_id"
-								value="4.5"
+								value="4.4"
 								step="0.1"
 								min="4"
 								max="5"
@@ -80,10 +80,9 @@
 						<label>
 							<input
 								type="checkbox"
-								name="options"
-								value="Option 1"
-								checked
+								value="regular_id"
 							/>
+							<!-- checked -->
 							<span> Regular </span>
 							<div class="checkbox_group_palette">
 								<span style="background-color: #639"></span>
@@ -93,8 +92,7 @@
 						<label>
 							<input
 								type="checkbox"
-								name="options"
-								value="Option 4"
+								value="festive_id"
 							/>
 							<span> Festive </span>
 							<div class="checkbox_group_palette">
@@ -108,8 +106,7 @@
 						<label>
 							<input
 								type="checkbox"
-								name="options"
-								value="Option 3"
+								value="light_id"
 							/>
 							<span> Light </span>
 							<div class="checkbox_group_palette">
@@ -120,8 +117,7 @@
 						<label>
 							<input
 								type="checkbox"
-								name="options"
-								value="Option 2"
+								value="dark_id"
 							/>
 							<span> Dark </span>
 							<div class="checkbox_group_palette">
@@ -222,36 +218,116 @@
 			</section>
 			<section class="view">
 				<div class="regular">
-					<img
+					<!-- <img
 						width="256"
 						height="230"
 						src="./assets/logo_css_regular.png"
 						alt="image with regular style"
-					/>
+						data-id="regular_id"
+					/> -->
+					<svg
+						xmlns="http://www.w3.org/2000/svg"
+						id="regular_id"
+						role="img"
+						aria-labelledby="svgTitle "
+						aria-describedby="svgDesc"
+						width="256"
+						height="230"
+						viewBox="0 0 256 230"
+						data-id="regular_id"
+					>
+						<title id="svgTitle"><!-- A new CSS logo --></title>
+						<desc id="svgDesc">
+							<!-- This SVG depicts the new CSS logo, featuring a Gothic-style,
+							four-centered arc as the main design element. It creatively
+							integrates shapes that represent both the overall logo and the
+							letters of the word 'CSS.' -->
+						</desc>
+					</svg>
 				</div>
 				<div class="festive">
-					<img
+					<!-- <img
 						width="256"
 						height="230"
 						src="./assets/logo_css_party.png"
 						alt="image with festive style"
-					/>
+						data-id="festive_id"
+					/> -->
+					<svg
+						xmlns="http://www.w3.org/2000/svg"
+						id="festive_id"
+						role="img"
+						aria-labelledby="svgTitle "
+						aria-describedby="svgDesc"
+						width="256"
+						height="230"
+						viewBox="0 0 256 230"
+						data-id="festive_id"
+					>
+						<title id="svgTitle"><!-- A new CSS logo --></title>
+						<desc id="svgDesc">
+							<!-- This SVG depicts the new CSS logo, featuring a Gothic-style,
+							four-centered arc as the main design element. It creatively
+							integrates shapes that represent both the overall logo and the
+							letters of the word 'CSS.' -->
+						</desc>
+					</svg>
 				</div>
 				<div class="light">
-					<img
+					<!-- <img
 						width="256"
 						height="230"
 						src="./assets/light.png"
 						alt="image with light style"
-					/>
+						data-id="light_id"
+					/> -->
+					<svg
+						xmlns="http://www.w3.org/2000/svg"
+						id="light_id"
+						role="img"
+						aria-labelledby="svgTitle "
+						aria-describedby="svgDesc"
+						width="256"
+						height="230"
+						viewBox="0 0 256 230"
+						data-id="light_id"
+					>
+						<title id="svgTitle"><!-- A new CSS logo --></title>
+						<desc id="svgDesc">
+							<!-- This SVG depicts the new CSS logo, featuring a Gothic-style,
+							four-centered arc as the main design element. It creatively
+							integrates shapes that represent both the overall logo and the
+							letters of the word 'CSS.' -->
+						</desc>
+					</svg>
 				</div>
 				<div class="dark">
-					<img
+					<!-- <img
 						width="256"
 						height="230"
 						src="./assets/dark.png"
 						alt="image with dark style"
-					/>
+						data-id="dark_id"
+					/> -->
+					<svg
+						xmlns="http://www.w3.org/2000/svg"
+						id="dark_id"
+						role="img"
+						aria-labelledby="svgTitle "
+						aria-describedby="svgDesc"
+						width="256"
+						height="230"
+						viewBox="0 0 256 230"
+						data-id="dark_id"
+					>
+						<title id="svgTitle"><!-- A new CSS logo --></title>
+						<desc id="svgDesc">
+							<!-- This SVG depicts the new CSS logo, featuring a Gothic-style,
+							four-centered arc as the main design element. It creatively
+							integrates shapes that represent both the overall logo and the
+							letters of the word 'CSS.' -->
+						</desc>
+					</svg>
 				</div>
 			</section>
 		</main>

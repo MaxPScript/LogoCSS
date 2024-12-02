@@ -82,6 +82,8 @@
 				"light"
 				"dark";
 			grid-template-columns: 1fr;
+			grid-template-rows: auto auto;
+			row-gap: 5vw;
 			.regular,
 			.light,
 			.festive,
