@@ -1,10 +1,12 @@
 export function createLogo(logoValue, lettersValue, el, colors) {
 	const { log } = console;
-	log("hello 5");
+	// log("hello 5");
 	// log(colors[el.getAttribute("id")]);
-	const colorsArray = colors[el.getAttribute("id")];
+	const colorsArray =
+		colors[el.getAttribute("id")] || colors[el.getAttribute("value")];
 	// log(el.getAttribute("id"));
-	log(colorsArray);
+	// log(el);
+	// log(colorsArray);
 	//
 	el.innerHTML = `
 		<title id="svgTitle"><!-- A new CSS logo --></title>
@@ -28,7 +30,7 @@ export function createLogo(logoValue, lettersValue, el, colors) {
 	//
 	// let springLine = 0;
 	let springLine = logoValue;
-	log(springLine);
+	// log(springLine);
 	let k_1 = lettersValue; // Higher coefficients shrink letter dimensions.
 	// the k coefficient for recalculating relative coordinates in letter paths
 	let k = (k_1 * 100) / springLine;

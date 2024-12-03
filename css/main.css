@@ -135,14 +135,15 @@ h2 {
 		grid-area: view;
 		display: grid;
 		/* gap: 1vw; */
-		padding: 10px;
+		padding: 2vw;
 		grid-template-areas:
 			"test test"
 			"regular festive"
 			"light dark";
 		grid-template-columns: 1fr 1fr;
 		/* grid-template-columns: 256px 256px; */
-		grid-template-rows: 1px auto auto;
+		/* grid-template-rows: 1px auto auto; */
+		grid-template-rows: 1px 256px 256px;
 		/* grid-template-rows: 50% 50%; */
 		/* grid-template-rows: 230px 230px; */
 		align-items: end;
@@ -160,12 +161,16 @@ h2 {
 		.regular::before {
 			content: "";
 			position: absolute;
-			inset: 0;
+			/* inset: 0; */
+			top: -2%;
+			left: -2%;
+			width: 102%;
+			height: 104%;
 			backdrop-filter: none;
 			transition: backdrop-filter 0.3s ease;
 		}
 		.applied::before {
-			backdrop-filter: blur(2px) grayscale(100%);
+			backdrop-filter: blur(3px) grayscale(100%);
 		}
 
 		.festive {
@@ -174,7 +179,11 @@ h2 {
 		.festive::before {
 			content: "";
 			position: absolute;
-			inset: 0;
+			/* inset: 0; */
+			top: -2%;
+			left: -2%;
+			width: 102%;
+			height: 104%;
 			backdrop-filter: none;
 			transition: backdrop-filter 0.3s ease;
 		}
@@ -187,7 +196,11 @@ h2 {
 		.light::before {
 			content: "";
 			position: absolute;
-			inset: 0;
+			/* inset: 0; */
+			top: -2%;
+			left: -2%;
+			width: 102%;
+			height: 104%;
 			backdrop-filter: none;
 			transition: backdrop-filter 0.3s ease;
 		}
@@ -200,7 +213,11 @@ h2 {
 		.dark::before {
 			content: "";
 			position: absolute;
-			inset: 0;
+			/* inset: 0; */
+			top: -2%;
+			left: -2%;
+			width: 102%;
+			height: 104%;
 			backdrop-filter: none;
 			transition: backdrop-filter 0.3s ease;
 		}

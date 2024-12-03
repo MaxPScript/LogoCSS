@@ -79,6 +79,7 @@
 								step="16"
 								min="128"
 								max="256"
+								data-type="number"
 							/>
 						</label>
 						<label for="letters_width_id"
@@ -86,10 +87,11 @@
 							<input
 								type="number"
 								id="letters_width_id"
-								value="4.4"
+								value="4.5"
 								step="0.1"
 								min="4"
 								max="5"
+								data-type="number"
 							/>
 						</label>
 					</div>
@@ -100,6 +102,7 @@
 								type="checkbox"
 								value="regular_id"
 								data-grayscale="0"
+								data-type="checkbox"
 							/>
 							<!-- checked -->
 							<span> Regular </span>
@@ -113,6 +116,7 @@
 								type="checkbox"
 								value="festive_id"
 								data-grayscale="1"
+								data-type="checkbox"
 							/>
 							<span> Festive </span>
 							<div class="checkbox_group_palette">
@@ -128,6 +132,7 @@
 								type="checkbox"
 								value="light_id"
 								data-grayscale="2"
+								data-type="checkbox"
 							/>
 							<span> Light </span>
 							<div class="checkbox_group_palette">
@@ -140,6 +145,7 @@
 								type="checkbox"
 								value="dark_id"
 								data-grayscale="3"
+								data-type="checkbox"
 							/>
 							<span> Dark </span>
 							<div class="checkbox_group_palette">
@@ -162,6 +168,7 @@
 									id="span_line_width_256_id"
 									name="span_line_width"
 									value="256"
+									data-type="radio"
 									checked
 								/>
 							</label>
@@ -174,6 +181,7 @@
 									id="span_line_width_192_id"
 									name="span_line_width"
 									value="192"
+									data-type="radio"
 								/>
 							</label>
 							<label
@@ -185,6 +193,7 @@
 									id="span_line_width_128_id"
 									name="span_line_width"
 									value="128"
+									data-type="radio"
 								/>
 							</label>
 						</div>
@@ -200,6 +209,7 @@
 									id="letters_width_5_id"
 									name="letters_width"
 									value="5"
+									data-type="radio"
 								/>
 							</label>
 							<label
@@ -212,6 +222,7 @@
 									id="letters_width_4_5_id"
 									name="letters_width"
 									value="4.5"
+									data-type="radio"
 									checked
 								/>
 							</label>
@@ -225,6 +236,7 @@
 									id="letters_width_4_id"
 									name="letters_width"
 									value="4"
+									data-type="radio"
 								/>
 							</label>
 						</div>
@@ -244,18 +256,11 @@
 					style="height: 1px"
 				>
 					<!-- This block is for eliminating interface jumps when changing the size
-					of the block with the regular class (initially the first one), I still
+					of the block with the 'regular' class (initially the first one), I still
 					haven't figured out what caused these jumps. When changing the sizes
 					of the other three blocks, there were no jumps. -->
 				</div>
 				<div class="regular">
-					<!-- <img
-						width="256"
-						height="230"
-						src="./assets/logo_css_regular.png"
-						alt="image with regular style"
-						data-id="regular_id"
-					/> -->
 					<svg
 						xmlns="http://www.w3.org/2000/svg"
 						id="regular_id"
@@ -266,6 +271,7 @@
 						height="230"
 						viewBox="0 0 256 230"
 						data-id="regular_id"
+						data-type="svg"
 					>
 						<title id="svgTitle"><!-- A new CSS logo --></title>
 						<desc id="svgDesc">
@@ -274,29 +280,9 @@
 							integrates shapes that represent both the overall logo and the
 							letters of the word 'CSS.' -->
 						</desc>
-						<defs>
-							<filter
-								id="frostedGlass"
-								x="0"
-								y="0"
-							>
-								<feGaussianBlur
-									in="SourceGraphic"
-									stdDeviation="5"
-								/>
-								<!-- You can add additional filter effects here if needed -->
-							</filter>
-						</defs>
 					</svg>
 				</div>
 				<div class="festive">
-					<!-- <img
-						width="256"
-						height="230"
-						src="./assets/logo_css_party.png"
-						alt="image with festive style"
-						data-id="festive_id"
-					/> -->
 					<svg
 						xmlns="http://www.w3.org/2000/svg"
 						id="festive_id"
@@ -307,6 +293,7 @@
 						height="230"
 						viewBox="0 0 256 230"
 						data-id="festive_id"
+						data-type="svg"
 					>
 						<title id="svgTitle"><!-- A new CSS logo --></title>
 						<desc id="svgDesc">
@@ -318,13 +305,6 @@
 					</svg>
 				</div>
 				<div class="light">
-					<!-- <img
-						width="256"
-						height="230"
-						src="./assets/light.png"
-						alt="image with light style"
-						data-id="light_id"
-					/> -->
 					<svg
 						xmlns="http://www.w3.org/2000/svg"
 						id="light_id"
@@ -335,6 +315,7 @@
 						height="230"
 						viewBox="0 0 256 230"
 						data-id="light_id"
+						data-type="svg"
 					>
 						<title id="svgTitle"><!-- A new CSS logo --></title>
 						<desc id="svgDesc">
@@ -346,13 +327,6 @@
 					</svg>
 				</div>
 				<div class="dark">
-					<!-- <img
-						width="256"
-						height="230"
-						src="./assets/dark.png"
-						alt="image with dark style"
-						data-id="dark_id"
-					/> -->
 					<svg
 						xmlns="http://www.w3.org/2000/svg"
 						id="dark_id"
@@ -363,6 +337,7 @@
 						height="230"
 						viewBox="0 0 256 230"
 						data-id="dark_id"
+						data-type="svg"
 					>
 						<title id="svgTitle"><!-- A new CSS logo --></title>
 						<desc id="svgDesc">
@@ -376,8 +351,12 @@
 			</section>
 		</main>
 	</body>
-	<script
+	<!-- <script
 		type="module"
 		src="./js/main.js"
+	></script> -->
+	<script
+		type="module"
+		src="./js/main_2.js"
 	></script>
 </html>
