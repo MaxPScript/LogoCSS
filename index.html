@@ -99,6 +99,7 @@
 							<input
 								type="checkbox"
 								value="regular_id"
+								data-grayscale="0"
 							/>
 							<!-- checked -->
 							<span> Regular </span>
@@ -111,6 +112,7 @@
 							<input
 								type="checkbox"
 								value="festive_id"
+								data-grayscale="1"
 							/>
 							<span> Festive </span>
 							<div class="checkbox_group_palette">
@@ -125,6 +127,7 @@
 							<input
 								type="checkbox"
 								value="light_id"
+								data-grayscale="2"
 							/>
 							<span> Light </span>
 							<div class="checkbox_group_palette">
@@ -136,6 +139,7 @@
 							<input
 								type="checkbox"
 								value="dark_id"
+								data-grayscale="3"
 							/>
 							<span> Dark </span>
 							<div class="checkbox_group_palette">
@@ -270,6 +274,19 @@
 							integrates shapes that represent both the overall logo and the
 							letters of the word 'CSS.' -->
 						</desc>
+						<defs>
+							<filter
+								id="frostedGlass"
+								x="0"
+								y="0"
+							>
+								<feGaussianBlur
+									in="SourceGraphic"
+									stdDeviation="5"
+								/>
+								<!-- You can add additional filter effects here if needed -->
+							</filter>
+						</defs>
 					</svg>
 				</div>
 				<div class="festive">

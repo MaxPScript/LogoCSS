@@ -6,7 +6,19 @@ export function createLogo(logoValue, lettersValue, el, colors) {
 	// log(el.getAttribute("id"));
 	log(colorsArray);
 	//
-	el.innerHTML = "";
+	el.innerHTML = `
+		<title id="svgTitle"><!-- A new CSS logo --></title>
+						<desc id="svgDesc">
+							<!-- This SVG depicts the new CSS logo, featuring a Gothic-style,
+							four-centered arc as the main design element. It creatively
+							integrates shapes that represent both the overall logo and the
+							letters of the word 'CSS.' -->
+						</desc>
+
+
+	`;
+	// x="0"
+	// 							y="0"
 	const pointsTudorArch = {
 		// p1: {
 		//     x:0,
@@ -81,7 +93,7 @@ export function createLogo(logoValue, lettersValue, el, colors) {
             v${logoShapeHeight - obj.p5.y}
             z
 		"
-		fill=${colorsArray[0]}
+		 fill=${colorsArray[0]}
 		>
         </path>
 	    `;

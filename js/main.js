@@ -14,7 +14,12 @@ window.onload = function () {
 		light_id: ["#ffffff", "#000000"],
 		dark_id: ["#000000", "#ffffff"],
 	};
-
+	//
+	const views = document.querySelectorAll(".regular, .festive, .light, .dark");
+	views.forEach((_) => {
+		_.classList.add("applied");
+	});
+	// log(views);
 	// helloFromMobileModule();
 	const checkboxes = document.querySelectorAll("input[type='checkbox']");
 	// const imageTemplates = document.querySelectorAll(".view img");
@@ -58,6 +63,10 @@ window.onload = function () {
 	checkboxes.forEach((_) => {
 		_.addEventListener("click", (ev) => {
 			const svgToDrawIn = document.getElementById(`${ev.target.value}`);
+			const regex = /^regular(_id)?$/;
+			log(svgToDrawIn); // svg
+			log(ev.target); // checkbox
+			log(ev);
 			if (ev.target.checked) {
 				// log(svgToDrawIn);
 				// svgToDrawIn.style.display = "block";
@@ -72,12 +81,26 @@ window.onload = function () {
 						}
 					});
 					createLogo(dimensions[0], dimensions[1], svgToDrawIn, colors);
+					views.forEach((_, index) => {
+						if (ev.target.dataset.grayscale == index) {
+							log("match!");
+							_.classList.toggle("applied");
+						}
+					});
 				}
 				//
 				// createLogo(128, 4.4, svgToDrawIn, colors);
 				//
 			} else {
 				createLogo(256, 4.5, svgToDrawIn, colors);
+				// const reg = document.querySelector(".regular");
+				// reg.classList.add("applied");
+				views.forEach((_, index) => {
+					if (ev.target.dataset.grayscale == index) {
+						log("not match!");
+						_.classList.toggle("applied");
+					}
+				});
 			}
 		});
 	});

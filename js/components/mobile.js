@@ -1,3 +1,3 @@
 export function helloFromMobileModule() {
-	log("hello from mobile module");
+	// log("hello from mobile module");
 }

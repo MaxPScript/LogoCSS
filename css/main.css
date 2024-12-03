@@ -142,8 +142,8 @@ h2 {
 			"light dark";
 		grid-template-columns: 1fr 1fr;
 		/* grid-template-columns: 256px 256px; */
-		/* grid-template-rows: auto auto; */
-		grid-template-rows: 50% 50%;
+		grid-template-rows: 1px auto auto;
+		/* grid-template-rows: 50% 50%; */
 		/* grid-template-rows: 230px 230px; */
 		align-items: end;
 		.test {
@@ -154,6 +154,60 @@ h2 {
 			display: grid;
 			place-content: center;
 		}
+		.regular {
+			position: relative;
+		}
+		.regular::before {
+			content: "";
+			position: absolute;
+			inset: 0;
+			backdrop-filter: none;
+			transition: backdrop-filter 0.3s ease;
+		}
+		.applied::before {
+			backdrop-filter: blur(2px) grayscale(100%);
+		}
+
+		.festive {
+			position: relative;
+		}
+		.festive::before {
+			content: "";
+			position: absolute;
+			inset: 0;
+			backdrop-filter: none;
+			transition: backdrop-filter 0.3s ease;
+		}
+		.applied::before {
+			backdrop-filter: blur(2px) grayscale(100%);
+		}
+		.light {
+			position: relative;
+		}
+		.light::before {
+			content: "";
+			position: absolute;
+			inset: 0;
+			backdrop-filter: none;
+			transition: backdrop-filter 0.3s ease;
+		}
+		.applied::before {
+			backdrop-filter: blur(2px) grayscale(100%);
+		}
+		.dark {
+			position: relative;
+		}
+		.dark::before {
+			content: "";
+			position: absolute;
+			inset: 0;
+			backdrop-filter: none;
+			transition: backdrop-filter 0.3s ease;
+		}
+		.applied::before {
+			backdrop-filter: blur(3px) grayscale(100%);
+		}
+
 		.regular,
 		.light {
 			/* margin-left: calc((100% - 256px) * 2 / 3); */

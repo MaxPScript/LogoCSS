@@ -54,6 +54,7 @@
 		.form {
 			position: sticky;
 			top: -16rem;
+			z-index: 1;
 			background-color: hsl(0 0% 66% / 0.8);
 			h2 {
 				justify-self: center;
