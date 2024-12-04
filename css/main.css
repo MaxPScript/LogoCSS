@@ -144,7 +144,7 @@ h2 {
 		/* grid-template-columns: 256px 256px; */
 		/* grid-template-rows: 1px auto auto; */
 		/* grid-template-rows: 1px 256px 256px; */
-		grid-template-rows: auto 256px 256px;
+		grid-template-rows: auto 230px 230px;
 		/* grid-template-rows: 50% 50%; */
 		/* grid-template-rows: 230px 230px; */
 		align-items: end;
