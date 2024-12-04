@@ -34,7 +34,8 @@ window.onload = function () {
 	const desktopInputs = document.querySelectorAll("input[type='number']");
 	const mobileInputs = document.querySelectorAll("input[type='radio']");
 	// const svgs = document.querySelectorAll(".view svg");
-	const svgs = Array.from(document.querySelectorAll(".view svg")).slice(1);
+	// const svgs = Array.from(document.querySelectorAll(".view svg")).slice(1);
+	const svgs = document.querySelectorAll(".view svg:not(.test svg)");
 	log(svgs);
 	//
 	function dataPush(nodeList) {
