@@ -33,7 +33,9 @@ window.onload = function () {
 	const checkboxes = document.querySelectorAll("input[type='checkbox']");
 	const desktopInputs = document.querySelectorAll("input[type='number']");
 	const mobileInputs = document.querySelectorAll("input[type='radio']");
-	const svgs = document.querySelectorAll(".view svg");
+	// const svgs = document.querySelectorAll(".view svg");
+	const svgs = Array.from(document.querySelectorAll(".view svg")).slice(1);
+	log(svgs);
 	//
 	function dataPush(nodeList) {
 		nodeList.forEach(function (_, index) {

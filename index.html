@@ -257,11 +257,39 @@
 				</div>
 			</section>
 			<section class="view">
+				<!-- height: 1px; -->
 				<div
 					class="test"
-					style="height: 1px"
+					style="position: relative; z-index: 2; margin-block-end: 2vw"
 				>
-					<button id="reset">Reset</button>
+					<svg
+						xmlns="http://www.w3.org/2000/svg"
+						id="svg_btn_id"
+						role="img"
+						aria-labelledby="svgTitle "
+						aria-describedby="svgDesc"
+						width="60"
+						height="40"
+						viewBox="0 0 60 40"
+						style="border: 1px solid green"
+					>
+						<!-- <button id="reset">Reset</button> -->
+						<foreignObject
+							x="5"
+							y="5"
+							width="50"
+							height="30"
+							style="border: 1px solid"
+						>
+							<button
+								xmlns="http://www.w3.org/1999/xhtml"
+								id="reset"
+								style="padding: 0.3rem"
+							>
+								Reset
+							</button>
+						</foreignObject>
+					</svg>
 					<!-- This block is for eliminating interface jumps when changing the size
 					of the block with the 'regular' class (initially the first one), I still
 					haven't figured out what caused these jumps. When changing the sizes
