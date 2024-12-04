@@ -2,8 +2,7 @@ export function createLogo(logoValue, lettersValue, el, colors) {
 	const { log } = console;
 	// log("hello 5");
 	// log(colors[el.getAttribute("id")]);
-	const colorsArray =
-		colors[el.getAttribute("id")] || colors[el.getAttribute("value")];
+	const colorsArray = colors[el.getAttribute("id")];
 	// log(el.getAttribute("id"));
 	// log(el);
 	// log(colorsArray);
