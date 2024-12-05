@@ -1,25 +1,16 @@
 export function createLogo(logoValue, lettersValue, el, colors) {
 	const { log } = console;
-	// log("hello 5");
-	// log(colors[el.getAttribute("id")]);
 	const colorsArray = colors[el.getAttribute("id")];
-	// log(el.getAttribute("id"));
-	// log(el);
-	// log(colorsArray);
 	//
 	el.innerHTML = `
-		<title id="svgTitle"><!-- A new CSS logo --></title>
-						<desc id="svgDesc">
-							<!-- This SVG depicts the new CSS logo, featuring a Gothic-style,
-							four-centered arc as the main design element. It creatively
-							integrates shapes that represent both the overall logo and the
-							letters of the word 'CSS.' -->
-						</desc>
-
-
+		<title id="svgTitle">A new CSS logo</title>
+		<desc id="svgDesc">
+			This SVG depicts the new CSS logo, featuring a Gothic-style,
+			four-centered arc as the main design element. It creatively
+			integrates shapes that represent both the overall logo and the
+			letters of the word 'CSS.'
+		</desc>
 	`;
-	// x="0"
-	// 							y="0"
 	const pointsTudorArch = {
 		// p1: {
 		//     x:0,
@@ -27,10 +18,8 @@ export function createLogo(logoValue, lettersValue, el, colors) {
 		// }
 	};
 	//
-	// let springLine = 0;
 	let springLine = logoValue;
-	// log(springLine);
-	let k_1 = lettersValue; // Higher coefficients shrink letter dimensions.
+	let k_1 = lettersValue; // Higher coefficient shrink letter dimensions.
 	// the k coefficient for recalculating relative coordinates in letter paths
 	let k = (k_1 * 100) / springLine;
 	let logoShapeHeight = (springLine * 0.9) | 0;
@@ -41,7 +30,8 @@ export function createLogo(logoValue, lettersValue, el, colors) {
 	//
 	let unit = springLine / 4;
 	const fillLogoShape = "#639";
-	// A Tudor Arch features four arcs, with each pair being identical, which necessitates the use of two separate radii for construction.
+	// A Tudor Arch features four arcs, with each pair being identical,
+	// which necessitates the use of two separate radii for construction.
 	let radiusOfSmallTudorArch = unit;
 	let radiusOfBigTudorArch = unit + Math.hypot(springLine, springLine / 2);
 	let ratio =
@@ -94,11 +84,10 @@ export function createLogo(logoValue, lettersValue, el, colors) {
             v${logoShapeHeight - obj.p5.y}
             z
 		"
-		 fill=${colorsArray[0]}
+		fill=${colorsArray[0]}
 		>
         </path>
 	    `;
-		// fill=${fillLogoShape}
 		el.insertAdjacentHTML("beforeend", pathTemplate);
 	}
 	createLogoShape(pointsTudorArch);

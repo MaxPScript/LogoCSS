@@ -63,7 +63,6 @@
 			<section class="form">
 				<h2>
 					Play with values&nbsp;
-
 					<button
 						popovertarget="mypopover_2"
 						aria-haspopup="true"
@@ -110,7 +109,6 @@
 								data-grayscale="0"
 								data-type="checkbox"
 							/>
-							<!-- checked -->
 							<span> Regular </span>
 							<div class="checkbox_group_palette">
 								<span style="background-color: #639"></span>
@@ -257,7 +255,11 @@
 				</div>
 			</section>
 			<section class="view">
-				<!-- height: 1px; -->
+				<!-- This block is for eliminating interface jumps when changing the size
+					of the block with the 'regular' class (initially the first one), I still
+					haven't figured out what caused these jumps. When changing the sizes
+					of the other three blocks, there were no jumps. -->
+				<!-- Then I got the idea to settle this with a reset button! ))) -->
 				<div
 					class="test"
 					style="position: relative; margin-block-end: 2vw"
@@ -273,7 +275,6 @@
 						viewBox="0 0 60 40"
 						style="border: 1px solid green"
 					>
-						<!-- <button id="reset">Reset</button> -->
 						<foreignObject
 							x="5"
 							y="5"
@@ -290,11 +291,6 @@
 							</button>
 						</foreignObject>
 					</svg>
-					<!-- This block is for eliminating interface jumps when changing the size
-					of the block with the 'regular' class (initially the first one), I still
-					haven't figured out what caused these jumps. When changing the sizes
-					of the other three blocks, there were no jumps. -->
-					<!-- Then I got the idea to settle this with a reset button! ))) -->
 				</div>
 				<div class="regular">
 					<svg
@@ -309,12 +305,12 @@
 						data-id="regular_id"
 						data-type="svg"
 					>
-						<title id="svgTitle"><!-- A new CSS logo --></title>
+						<title id="svgTitle">A new CSS logo proposal</title>
 						<desc id="svgDesc">
-							<!-- This SVG depicts the new CSS logo, featuring a Gothic-style,
+							This SVG depicts the new CSS logo, featuring a Gothic-style,
 							four-centered arc as the main design element. It creatively
 							integrates shapes that represent both the overall logo and the
-							letters of the word 'CSS.' -->
+							letters of the word 'CSS.'
 						</desc>
 					</svg>
 				</div>
@@ -331,12 +327,12 @@
 						data-id="festive_id"
 						data-type="svg"
 					>
-						<title id="svgTitle"><!-- A new CSS logo --></title>
+						<title id="svgTitle">A new CSS logo proposal</title>
 						<desc id="svgDesc">
-							<!-- This SVG depicts the new CSS logo, featuring a Gothic-style,
+							This SVG depicts the new CSS logo, featuring a Gothic-style,
 							four-centered arc as the main design element. It creatively
 							integrates shapes that represent both the overall logo and the
-							letters of the word 'CSS.' -->
+							letters of the word 'CSS.'
 						</desc>
 					</svg>
 				</div>
@@ -353,12 +349,12 @@
 						data-id="light_id"
 						data-type="svg"
 					>
-						<title id="svgTitle"><!-- A new CSS logo --></title>
+						<title id="svgTitle">A new CSS logo proposal</title>
 						<desc id="svgDesc">
-							<!-- This SVG depicts the new CSS logo, featuring a Gothic-style,
+							This SVG depicts the new CSS logo, featuring a Gothic-style,
 							four-centered arc as the main design element. It creatively
 							integrates shapes that represent both the overall logo and the
-							letters of the word 'CSS.' -->
+							letters of the word 'CSS.'
 						</desc>
 					</svg>
 				</div>
@@ -375,28 +371,20 @@
 						data-id="dark_id"
 						data-type="svg"
 					>
-						<title id="svgTitle"><!-- A new CSS logo --></title>
+						<title id="svgTitle">A new CSS logo proposal</title>
 						<desc id="svgDesc">
-							<!-- This SVG depicts the new CSS logo, featuring a Gothic-style,
+							This SVG depicts the new CSS logo, featuring a Gothic-style,
 							four-centered arc as the main design element. It creatively
 							integrates shapes that represent both the overall logo and the
-							letters of the word 'CSS.' -->
+							letters of the word 'CSS.'
 						</desc>
 					</svg>
 				</div>
 			</section>
 		</main>
 	</body>
-	<!-- <script
-		type="module"
-		src="./js/main.js"
-	></script> -->
-	<!-- <script
-		type="module"
-		src="./js/main_2.js"
-	></script> -->
 	<script
 		type="module"
-		src="./js/main_3.js"
+		src="./js/main.js"
 	></script>
 </html>

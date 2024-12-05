@@ -49,8 +49,6 @@
 			"view";
 		grid-template-columns: 1fr;
 		grid-template-rows: max-content auto auto;
-		/* gap: 1rem; */
-		/* padding: 1rem; */
 		.form {
 			position: sticky;
 			top: -16rem;
@@ -94,7 +92,6 @@
 			}
 		}
 		.view {
-			/* grid-area: view; */
 			grid-template-areas:
 				"test"
 				"regular"
@@ -102,7 +99,6 @@
 				"light"
 				"dark";
 			grid-template-columns: 1fr;
-			/* grid-template-rows: auto auto auto auto auto; */
 			grid-template-rows: auto 230px 230px 230px 230px;
 			row-gap: 20px;
 			.regular,
@@ -110,18 +106,6 @@
 			.festive,
 			.dark {
 				margin: auto;
-			}
-		}
-	}
-}
-@media (width < 400px) {
-	.main {
-		.form {
-			.controls {
-				.controls_input {
-					label {
-					}
-				}
 			}
 		}
 	}

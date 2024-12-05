@@ -47,3 +47,7 @@ I understood that the smaller the size of the letters (in the case of lower reso
 
 We could potentially have different logo variations for various devices and utilize a color version for holidays, which is something we've accomplished already. Come on, people, everyone to the CSS party! Let's make
 the web right now!
+
+### Footer
+
+Your feedback on the codebase is welcomed. Please share any comments, corrections, suggestions, or errors you find!

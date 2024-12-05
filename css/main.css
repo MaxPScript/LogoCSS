@@ -13,7 +13,9 @@
 img,
 svg {
 	display: block;
-	/* transition: all 0.8s; */
+}
+svg {
+	/* stroke: black; */
 }
 [popover] {
 	width: 80%;
@@ -134,19 +136,14 @@ h2 {
 	.view {
 		grid-area: view;
 		display: grid;
-		/* gap: 1vw; */
+		gap: 2vw;
 		padding: 2vw;
 		grid-template-areas:
 			"test test"
 			"regular festive"
 			"light dark";
 		grid-template-columns: 1fr 1fr;
-		/* grid-template-columns: 256px 256px; */
-		/* grid-template-rows: 1px auto auto; */
-		/* grid-template-rows: 1px 256px 256px; */
 		grid-template-rows: auto 230px 230px;
-		/* grid-template-rows: 50% 50%; */
-		/* grid-template-rows: 230px 230px; */
 		align-items: end;
 		.test {
 			grid-area: test;
@@ -162,7 +159,6 @@ h2 {
 		.regular::before {
 			content: "";
 			position: absolute;
-			/* inset: 0; */
 			top: -2%;
 			left: -2%;
 			width: 102%;
@@ -180,7 +176,6 @@ h2 {
 		.festive::before {
 			content: "";
 			position: absolute;
-			/* inset: 0; */
 			top: -2%;
 			left: -2%;
 			width: 102%;
@@ -197,7 +192,6 @@ h2 {
 		.light::before {
 			content: "";
 			position: absolute;
-			/* inset: 0; */
 			top: -2%;
 			left: -2%;
 			width: 102%;
@@ -214,7 +208,6 @@ h2 {
 		.dark::before {
 			content: "";
 			position: absolute;
-			/* inset: 0; */
 			top: -2%;
 			left: -2%;
 			width: 102%;
@@ -224,15 +217,6 @@ h2 {
 		}
 		.applied::before {
 			backdrop-filter: blur(3px) grayscale(100%);
-		}
-
-		.regular,
-		.light {
-			/* margin-left: calc((100% - 256px) * 2 / 3); */
-		}
-		.festive,
-		.dark {
-			/* margin-left: calc((100% - 256px) * 2 / 6); */
 		}
 	}
 }

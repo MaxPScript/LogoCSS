@@ -1,12 +1,11 @@
-import { helloFromMobileModule } from "./components/mobile.js";
 import { createLogo } from "./components/css_logo_svg.js";
+import { defaultSetup } from "./components/default_setup.js";
 //
 
+// function createLogo(logoValue, lettersValue, el, colors) {}
 window.onload = function () {
 	const { log } = console;
-	//
-	// const controlsInputs = document.querySelector(".controls_input");
-	// log(controlsInputs);
+	log("main_3.js");
 	//
 	const colors = {
 		regular_id: ["#663399", "#ffffff"],
@@ -15,194 +14,210 @@ window.onload = function () {
 		dark_id: ["#000000", "#ffffff"],
 	};
 	//
-	const views = document.querySelectorAll(".regular, .festive, .light, .dark");
-	views.forEach((_) => {
-		_.classList.add("applied");
-	});
-	// log(views);
-	// helloFromMobileModule();
-	const checkboxes = document.querySelectorAll("input[type='checkbox']");
-	checkboxes.forEach((_) => {
-		_.checked = false;
-	});
-	// const imageTemplates = document.querySelectorAll(".view img");
-	const svgTemplates = document.querySelectorAll(".view svg");
 	//
+	const data = {
+		checkbox: [],
+		number: [],
+		radio: [],
+		radioChecked() {
+			const radioChecked = this.radio.filter((_) => _.checked);
+			return radioChecked;
+		},
+		svg: [],
+		defaultNumberValues: [256, 4.5],
+		radioValues: [256, 192, 128, 5.0, 4.5, 4.0],
+		radioStates: [true, false, false, false, true, false],
+	};
+	//
+	const checkboxes = document.querySelectorAll("input[type='checkbox']");
 	const desktopInputs = document.querySelectorAll("input[type='number']");
 	const mobileInputs = document.querySelectorAll("input[type='radio']");
-	mobileInputs.forEach((_) => {
-		// log(_);
+	const svgs = document.querySelectorAll(".view svg:not(.test svg)");
+	log(svgs);
+	//
+	function dataPush(nodeList) {
+		nodeList.forEach(function (_, index) {
+			let type = _.dataset.type;
+			data[type].push(_);
+
+			if (type === "checkbox") {
+				_.addEventListener("click", checkboxHandler);
+			}
+			if (type === "number") {
+				_.addEventListener("input", numberHandler);
+			}
+			if (type === "radio") {
+				_.addEventListener("change", radioHandler);
+			}
+			if (type === "svg") {
+			}
+		});
+	}
+	//
+	dataPush(checkboxes);
+	dataPush(desktopInputs);
+	dataPush(mobileInputs);
+	dataPush(svgs);
+	//
+	// default setup and reset
+	defaultSetup(data, colors);
+	const resetButton = document.querySelector("#reset");
+	resetButton.addEventListener("click", function () {
+		defaultSetup(data, colors);
 	});
 	//
-	checkboxes.forEach((_) => {
-		const svgToDrawIn = document.getElementById(`${_.value}`);
-		createLogo(256, 4.5, svgToDrawIn, colors);
-	});
-	//
-	checkboxes.forEach((_) => {
-		if (_.checked) {
-			log(_.value);
-			// log()
-			// const svgToDrawIn = document.getElementById(`${_.value}`);
-			// createLogo(256, 4.4, svgToDrawIn, colors);
-			// imageTemplates.forEach((img) => {
-			// 	if (img.dataset.id == _.value) {
-			// 		img.style.display = "none";
-			// 	}
-			// });
-			svgTemplates.forEach((svg) => {
-				if (svg.dataset.id != _.value) {
-					// svg.style.display = "none";
+	// handlers
+	function checkboxHandler() {
+		if (window.innerWidth >= 660) {
+			checkboxes.forEach((chbx, index) => {
+				if (chbx.checked) {
+					// create svg with values from live number arr
+					// and remove grayscale-filter effect
+					svgs.forEach((svg, index) => {
+						if (svg.getAttribute("id") == chbx.value) {
+							createLogo(
+								data.number[0].value,
+								data.number[1].value,
+								svg,
+								colors
+							);
+							svg.closest("div").classList.remove("applied");
+						} else {
+						}
+					});
+				} else {
+					// create default svg with values from data.defaultNumberValues arr
+					// and apply grayscale-filter effect
+					svgs.forEach((svg, index) => {
+						if (svg.getAttribute("id") == chbx.value) {
+							createLogo(
+								data.defaultNumberValues[0],
+								data.defaultNumberValues[1],
+								svg,
+								colors
+							);
+							svg.closest("div").classList.add("applied");
+						} else {
+						}
+					});
 				}
 			});
 		} else {
-			// imageTemplates.forEach((img) => {
-			// 	if (img.dataset.id == _.value) {
-			// 		img.style.display = "none";
-			// 	}
-			// });
-		}
-	});
-	checkboxes.forEach((_) => {
-		_.addEventListener("click", (ev) => {
-			const svgToDrawIn = document.getElementById(`${ev.target.value}`);
-			// const regex = /^regular(_id)?$/;
-			log(svgToDrawIn); // svg
-			log(ev.target); // checkbox
-			log(ev);
-			if (ev.target.checked) {
-				if (window.innerWidth < 660) {
-					const dimensions = [];
-					mobileInputs.forEach((_) => {
-						if (_.checked) {
-							dimensions.push(+_.value);
+			checkboxes.forEach((chbx, index) => {
+				if (chbx.checked) {
+					// create svg with values from live radio inputs
+					// and remove grayscale-filter effect
+					svgs.forEach((svg, index) => {
+						if (svg.getAttribute("id") == chbx.value) {
+							createLogo(
+								`${data.radioChecked()[0].value}`,
+								`${data.radioChecked()[1].value}`,
+								svg,
+								colors
+							);
+							svg.closest("div").classList.remove("applied");
 						} else {
-							// dimensions.push(+_.value);
-							// createLogo(256, 4.5, svgToDrawIn, colors);
 						}
 					});
-					createLogo(dimensions[0], dimensions[1], svgToDrawIn, colors);
-					views.forEach((_, index) => {
-						if (ev.target.dataset.grayscale == index) {
-							log("match!");
-							_.classList.toggle("applied");
-						}
-					});
-				}
-				//
-			} else {
-				if (window.innerWidth < 660) {
-					createLogo(256, 4.5, svgToDrawIn, colors);
-					views.forEach((_, index) => {
-						if (ev.target.dataset.grayscale == index) {
-							log("not match!");
-							_.classList.toggle("applied");
+				} else {
+					// create default svg with values from data.defaultNumberValues arr
+					// and apply grayscale-filter effect
+					svgs.forEach((svg, index) => {
+						if (svg.getAttribute("id") == chbx.value) {
+							createLogo(
+								data.defaultNumberValues[0],
+								data.defaultNumberValues[1],
+								svg,
+								colors
+							);
+							svg.closest("div").classList.add("applied");
+						} else {
 						}
 					});
 				}
-			}
-		});
-	});
-	//
-	//
-	//
-	if (window.innerWidth >= 660) {
-		const data = {
-			svgToDrawIn: "",
-			isChecked: false,
-			dimensions: [],
-			_this: [],
-		};
-		//
-		// desktopInputs.forEach((_) => {
-		// 	data.dimensions.push(+_.value);
-		// });
-		//
-		checkboxes.forEach((_) => {
-			_.addEventListener("click", checkboxFunction);
-		});
-		function checkboxFunction(ev) {
-			// data._this = ev.target;
-			data._this.push(ev.target);
-			log(data._this);
-			data.dimensions.length = 0;
-			desktopInputs.forEach((_) => {
-				data.dimensions.push(+_.value);
-			});
-			log(data);
-			const svgToDrawIn = document.getElementById(`${this.value}`);
-			log(data);
-			createLogo(data.dimensions[0], data.dimensions[1], svgToDrawIn, colors);
-			// When any checkbox is checked, the grayscale and blur effects are removed,
-			// and the SVG is drawn using the dimensions provided by the desktop inputs (span line width and letters width)
-			views.forEach((_, index) => {
-				if (this.checked && this.dataset.grayscale == index) {
-					log("match!");
-					_.classList.remove("applied");
-				} else if (!this.checked && this.dataset.grayscale == index) {
-					_.classList.add("applied");
-					createLogo(256, 4.5, svgToDrawIn, colors);
-				}
-			});
-		}
-		desktopInputs.forEach((_) => {
-			_.addEventListener("input", desktopInputsFunction);
-		});
-		function desktopInputsFunction() {
-			data.dimensions.length = 0;
-			desktopInputs.forEach((_) => {
-				data.dimensions.push(+_.value);
-			});
-			const svgToDrawIn = document.getElementById(`${data._this.value}`);
-			//
-			views.forEach((_, index) => {
-				//
-				data._this.forEach((checkbox) => {
-					if (checkbox.checked && checkbox.dataset.grayscale == index) {
-						log("match!");
-						_.classList.remove("applied");
-						log(data.dimensions);
-						log(svgToDrawIn);
-						createLogo(
-							data.dimensions[0],
-							data.dimensions[1],
-							svgToDrawIn,
-							colors
-						);
-					} else if (!checkbox.checked && checkbox.dataset.grayscale == index) {
-						_.classList.add("applied");
-						// createLogo(dimensions[0], dimensions[1], svgToDrawIn, colors);
-					}
-				});
-				//
 			});
 		}
 	}
 	//
+	function numberHandler(ev) {
+		const _this = ev.target;
+		if (_this.step == 16) {
+			const min = +ev.target.min;
+			const max = +ev.target.max;
+			const step = +ev.target.step;
+			if (+_this.value < min || +_this.value > max) {
+				_this.value = data.defaultNumberValues[0];
+				alert("use arrows please");
+			} else {
+				if ((+_this.value - min) % step === 0) {
+					// update data.number array
+					data.number[0].value = _this.value;
+					//
+					const checked = data.checkbox.filter((_) => _.checked);
+					svgs.forEach((svg, index) => {
+						let svgToDraw = null;
+						checked.forEach((_, index) => {
+							if (_.value == svg.getAttribute("id")) {
+								svgToDraw = svg;
+								createLogo(
+									data.number[0].value,
+									data.number[1].value,
+									svgToDraw,
+									colors
+								);
+							}
+						});
+					});
+				}
+			}
+		} else {
+			const min = 10 * ev.target.min;
+			const max = 10 * ev.target.max;
+			const step = 10 * ev.target.step;
+			if (10 * _this.value < min || 10 * _this.value > max) {
+				_this.value = data.defaultNumberValues[1];
+				alert("use arrows please");
+			} else {
+				if ((10 * _this.value - min) % step === 0) {
+					// update data.number array
+					data.number[1].value = _this.value;
+					//
+					const checked = data.checkbox.filter((_) => _.checked);
+					svgs.forEach((svg, index) => {
+						let svgToDraw = null;
+						checked.forEach((_, index) => {
+							if (_.value == svg.getAttribute("id")) {
+								svgToDraw = svg;
+								createLogo(
+									data.number[0].value,
+									data.number[1].value,
+									svgToDraw,
+									colors
+								);
+							}
+						});
+					});
+				}
+			}
+		}
+	}
 	//
-	//
-	// checkboxes.forEach((_) => {
-	// 	_.addEventListener("click", (ev) => {
-	// 		const svgToDrawIn = document.getElementById(`${ev.target.value}`);
-	// 		if (ev.target.checked) {
-	// 			if (window.innerWidth >= 660) {
-	// 				const dimensions = [];
-	// 				desktopInputs.forEach((_, index) => {
-	// 					dimensions.push(+_.value);
-	// 					_.addEventListener("input", () => {
-	// 						dimensions[index] = _.value;
-	// 						createLogo(dimensions[0], dimensions[1], svgToDrawIn, colors);
-	// 						views.forEach((_, index) => {
-	// 							if (ev.target.dataset.grayscale == index) {
-	// 								log("match!");
-	// 								_.classList.remove("applied");
-	// 							}
-	// 						});
-	// 					});
-	// 				});
-	// 			}
-	// 		}
-	// 	});
-	// });
-	// log(imageTemplates);
+	function radioHandler(ev) {
+		const _this = ev.target;
+		const checked = data.checkbox.filter((_) => _.checked);
+		svgs.forEach((svg, index) => {
+			let svgToDraw = null;
+			checked.forEach((_, index) => {
+				if (_.value == svg.getAttribute("id")) {
+					svgToDraw = svg;
+					createLogo(
+						`${data.radioChecked()[0].value}`,
+						`${data.radioChecked()[1].value}`,
+						svg,
+						colors
+					);
+				}
+			});
+		});
+	}
 };
