@@ -40,6 +40,7 @@ CSS! Paradox! May be `border-top: tudor`?
 The main detail in the proposed version is a 4-center arch. It is built according to a certain algorithm. Variations are possible, but the principle is 4 arcs of a circle, paired equal. Built in Sketchup 2019. File <ins>Tudor_arch.skp</ins> attached. Here's a snapshot to give you a fast visual.
 
 ![Tudor Arch](./assets/Tudor_arch.jpg)
+![Letters](./assets/letters.jpg)
 
 I've written a script to create an SVG (both the shape as a whole and the individual letters) based on the drawing's dimensions. To build we only need one dimension. This is the length of the baseline or Span Line (512 in this case). Although for rendering on the HTML page i chose the size 256 as the maximum. All the magic numbers in the script are based on this baseline size, as well as my subjective vision of proportions. Ancient architectural sages understood a profound truth: harmony emerges not from complexity, but from the perfect balance of proportions.
 

@@ -157,7 +157,7 @@ h2 {
 	.view {
 		grid-area: view;
 		display: grid;
-		gap: 2vw;
+		row-gap: 5vw;
 		padding: 2vw;
 		grid-template-areas:
 			"test test"
