@@ -164,7 +164,8 @@ h2 {
 			"regular festive"
 			"light dark";
 		grid-template-columns: 1fr 1fr;
-		grid-template-rows: auto 230px 230px;
+		/* grid-template-rows: auto 230px 230px; */
+		grid-template-rows: max-content 230px auto;
 		align-items: end;
 		.test {
 			grid-area: test;

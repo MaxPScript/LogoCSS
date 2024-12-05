@@ -32,7 +32,7 @@ Please, let gothic be here, on the web, for 5 minutes... Then...
 Then you will not be able to forget it. With organ music, 3
 minutes will be enough...😀
 
-So, we have stylish cars, stylish architecture/furniture, but no stylish
+So, we have stylish auto/moto, stylish architecture/furniture, but no stylish
 CSS! Paradox!
 
 ## How is it done?
@@ -51,3 +51,5 @@ the web right now!
 ### Footer
 
 Your feedback on the codebase is welcomed. Please share any comments, corrections, suggestions, or errors you find!
+
+Happy New Year!
