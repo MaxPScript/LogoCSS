@@ -37,7 +37,7 @@ CSS! Paradox!
 
 ## How is it done?
 
-The main detail in the proposed version is a 4-center arch. It is built according to a certain algorithm. Variations are possible, but the principle is 4 arcs of a circle, paired equal. Built in Sketchup 2019. File Tudor_arch.skp attached. Here's a snapshot to give you a fast visual.
+The main detail in the proposed version is a 4-center arch. It is built according to a certain algorithm. Variations are possible, but the principle is 4 arcs of a circle, paired equal. Built in Sketchup 2019. File <ins>Tudor_arch.skp</ins> attached. Here's a snapshot to give you a fast visual.
 
 ![Tudor Arch](./assets/Tudor_arch.jpg)
 
