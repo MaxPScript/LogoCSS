@@ -15,7 +15,7 @@ scary, pure and bright Gothic! Its impact has been tested for
 centuries. Beauty is so divine that it was deliberately
 denigrated, thus hidden from general understanding.
 
-The beauty of this approach lies in its simplicity and conciseness. By employing proportions, straight lines, and circular arcs, it provides remarkable structural strength with minimal materials—something any web application would wish to replicate.
+The beauty of this approach lies in its simplicity and conciseness. By employing proportions, straight lines, and circular arcs (Dear Mr. Bezier was later), it provides remarkable structural strength with minimal materials—something any web application would wish to replicate.
 
 One of the pearls of Gothic is the four-centred arch. The Tudor
 arch.
@@ -33,7 +33,7 @@ Then you will not be able to forget it. With organ music, 3
 minutes will be enough...😀
 
 So, we have stylish auto/moto, stylish architecture/furniture, but no stylish
-CSS! Paradox!
+CSS! Paradox! May be `border-top: tudor`?
 
 ## How is it done?
 
@@ -45,7 +45,7 @@ I've written a script to create an SVG (both the shape as a whole and the indivi
 
 I understood that the smaller the size of the letters (in the case of lower resolutions), the simpler the outline should be. Another piece of wisdom from the past: the measure of everything is man. But I couldn't resist and added the same style to the letters. Though i aligned the letters horizontally in the center to improve perception. Let's break down the design together - check out the dimensions, proportions, and color palette!
 
-We could potentially have different logo variations for various devices and utilize a color version for holidays, which is something we've accomplished already. Come on, people, everyone to the CSS party! Let's make
+We could potentially have different logo variations for various devices and utilize a color version for holidays, which is something we've accomplished already. Come on, people, everyone to the CSS party! ![quad](./assets/Quad.jpg) Let's make
 the web right now!
 
 ### Footer
