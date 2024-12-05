@@ -41,7 +41,7 @@ The main detail in the proposed version is a 4-center arch. It is built accordin
 
 ![Tudor Arch](./assets/Tudor_arch.jpg)
 
-I've written a script to create an SVG based on the drawing's dimensions. To build we only need one dimension. This is the length of the baseline or Span Line (512 in this case). Although for rendering on the HTML page i chose the size 256 as the maximum. All the magic numbers in the script are based on this baseline size, as well as my subjective vision of proportions. Ancient architectural sages understood a profound truth: harmony emerges not from complexity, but from the perfect balance of proportions.
+I've written a script to create an SVG (both the shape as a whole and the individual letters) based on the drawing's dimensions. To build we only need one dimension. This is the length of the baseline or Span Line (512 in this case). Although for rendering on the HTML page i chose the size 256 as the maximum. All the magic numbers in the script are based on this baseline size, as well as my subjective vision of proportions. Ancient architectural sages understood a profound truth: harmony emerges not from complexity, but from the perfect balance of proportions.
 
 I understood that the smaller the size of the letters (in the case of lower resolutions), the simpler the outline should be. Another piece of wisdom from the past: the measure of everything is man. But I couldn't resist and added the same style to the letters. Though i aligned the letters horizontally in the center to improve perception. Let's break down the design together - check out the dimensions, proportions, and color palette!
 

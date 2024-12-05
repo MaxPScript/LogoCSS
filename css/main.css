@@ -83,14 +83,35 @@ h2 {
 			display: grid;
 			gap: 1vw;
 			.controls_input {
-				display: flex;
+				/* display: flex; */
+				/* ******************************************** */
+				display: none;
+				/* ******************************************** */
 				label,
 				input {
 					width: 50%;
 				}
 			}
 			.dimensions_presets_group {
-				display: none;
+				display: block;
+				/* ****************************************************** */
+				display: flex;
+				justify-content: space-evenly;
+				column-gap: 1vw;
+				> div {
+					width: 50%;
+					display: grid;
+					grid-template-columns: auto auto;
+					column-gap: 1vw;
+					row-gap: 2vw;
+					span {
+						grid-row: 1/4;
+					}
+					label {
+						padding: 1vw;
+					}
+				}
+				/* ****************************************************** */
 			}
 			.checkbox_group {
 				display: grid;
