@@ -37,7 +37,7 @@ CSS! Paradox! May be `border-top: tudor`?
 
 ## How is it done?
 
-The main detail in the proposed version is a 4-center arch. It is built according to a certain algorithm. Variations are possible, but the principle is 4 arcs of a circle, paired equal. Built in Sketchup 2019. File <ins>Tudor_arch.skp</ins> attached. Here's a snapshot to give you a fast visual.
+The main detail in the proposed version is a 4-center arch. It is built according to a certain algorithm. Variations are possible, but the principle is 4 arcs of a circle, paired equal. Built in Sketchup 2019. File <ins>Tudor_arch.skp</ins> attached. Here's a snapshots to give you a fast visual.
 
 ![Tudor Arch](./assets/Tudor_arch.jpg)
 ![Letters](./assets/letters.jpg)
@@ -46,7 +46,7 @@ I've written a script to create an SVG (both the shape as a whole and the indivi
 
 I understood that the smaller the size of the letters (in the case of lower resolutions), the simpler the outline should be. Another piece of wisdom from the past: the measure of everything is man. But I couldn't resist and added the same style to the letters. Though i aligned the letters horizontally in the center to improve perception. Let's break down the design together - check out the dimensions, proportions, and color palette!
 
-We could potentially have different logo variations for various devices and utilize a color version for holidays, which is something we've accomplished already. Come on, people, everyone to the CSS party! ![quad](./assets/Quad.jpg) Let's make
+We could potentially have different logo variations for various devices and utilize a color version for holidays, which is something we've accomplished already. Come on, people, everyone to the CSS party! Anyone in for some poker? I’m holding a Quad! ![quad](./assets/Quad.jpg) Let's make
 the web right now!
 
 ### Footer
