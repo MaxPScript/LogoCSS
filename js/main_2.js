@@ -1,7 +1,8 @@
 import { createLogo } from "./components/css_logo_svg.js";
 import { defaultSetup } from "./components/default_setup.js";
+import { createTudorButton } from "./components/tudor_button.js";
 //
-
+createTudorButton(60, svg_btn_id);
 // function createLogo(logoValue, lettersValue, el, colors) {}
 window.onload = function () {
 	const { log } = console;
