@@ -8,7 +8,6 @@ export function createTudorButton(logoValue, el) {
 		<desc id="svgDesc">
 			This effort aims to design a button in an innovative gothic style.
 		</desc>
-
                             `;
 	// Reset
 	const pointsTudorArch = {
@@ -93,14 +92,28 @@ export function createTudorButton(logoValue, el) {
 
 		// text
 		const text = document.createElementNS("http://www.w3.org/2000/svg", "text");
-		text.setAttribute("x", 30);
-		text.setAttribute("y", 22);
-		text.setAttribute("font-size", "16");
+		text.setAttribute("x", 33);
+		text.setAttribute("y", 26);
+		text.setAttribute("font-size", "18");
+		text.setAttribute("letter-spacing", "1.1");
+		text.setAttribute("font-weight", "600");
 		text.setAttribute("text-anchor", "middle");
-		text.setAttribute("fill", "black");
+		// text.setAttribute("fill", "hsl(30deg 65% 50%)");
+		text.setAttribute("fill", "hsl(180, 55%, 38%)");
+		// #A57865
 		text.setAttribute("stroke", "none");
+		// #6591a4
 		text.textContent = "Reset";
+		//
+		// Adding hover effect
+		// text.addEventListener("mouseover", () => {
+		// 	text.setAttribute("fill", "hsl(198, 80%, 60%)"); // Brighter color (example)
+		// });
 
+		// text.addEventListener("mouseout", () => {
+		// 	text.setAttribute("fill", "hsl(198, 65%, 40%)"); // Original color
+		// });
+		//
 		el.appendChild(text);
 		// text
 	}
@@ -127,4 +140,6 @@ export function createTudorButton(logoValue, el) {
 
 	// Append the foreignObject after adding the path
 	el.appendChild(foreignObject);
+
+	//
 }

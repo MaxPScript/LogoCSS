@@ -10,6 +10,7 @@
 	src: url("../assets/fonts/DINishPreviewCondensed-Heavy.ttf")
 		format("truetype");
 }
+
 img,
 svg {
 	display: block;
@@ -175,6 +176,10 @@ h2 {
 				/* cursor: pointer; */
 				stroke: hsl(0 50% 0% / 0.8);
 				stroke-width: 0.5;
+				transition: all 0.1s;
+			}
+			svg:hover {
+				border-bottom: 3px solid #2bd4d4;
 			}
 			button {
 				width: 100%;
@@ -185,6 +190,12 @@ h2 {
 				border: none;
 				appearance: none;
 				background: transparent;
+			}
+			button:hover {
+				/* In Mozilla bug: border-bottom beside the svg
+				and there is need to adjust position of button to top.
+				I want to implement a hover effect on the SVG */
+				/* border-bottom: 3px solid yellow; */
 			}
 		}
 		> * {
