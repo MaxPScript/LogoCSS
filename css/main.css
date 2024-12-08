@@ -10,7 +10,9 @@
 	src: url("../assets/fonts/DINishPreviewCondensed-Heavy.ttf")
 		format("truetype");
 }
-
+:root {
+	scrollbar-color: #8eb0dc #d2d4d6;
+}
 img,
 svg {
 	display: block;
