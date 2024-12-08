@@ -11,7 +11,9 @@
 		format("truetype");
 }
 :root {
-	scrollbar-color: #8eb0dc #d2d4d6;
+	--gray_66: hsl(0 0% 66%);
+	--teal: hsl(180 66% 50%);
+	scrollbar-color: var(--teal) var(--gray_66);
 }
 img,
 svg {
@@ -58,7 +60,7 @@ h2 {
 	grid-template-columns: 1fr 1fr 1fr;
 	grid-template-rows: max-content auto;
 	> * {
-		background-color: hsl(0 0% 66%);
+		background-color: var(--gray_66);
 	}
 	.header {
 		grid-area: header;
