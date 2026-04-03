@@ -31,12 +31,18 @@ body {
 
 .slides {
 	display: flex;
+	display: grid;
+	grid-template-columns: 1fr;
+	/* place-items: center; */
+	/* grid-template-areas: "image"; */
 	transition: transform 0.5s ease;
 }
 
 .slides img {
+	grid-area: 1/1/2/2;
 	display: block;
-	/* width: 100%; */
+	width: 80%;
+	margin: auto;
 	flex-shrink: 0;
 	pointer-events: none;
 }
@@ -48,7 +54,7 @@ body {
 	background: rgba(0, 0, 0, 0.5);
 	color: white;
 	border: none;
-	padding: 10px;
+	padding: 1em;
 	cursor: pointer;
 }
 
