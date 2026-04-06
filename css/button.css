@@ -1,0 +1,44 @@
+.switch_page {
+	display: inline-block;
+}
+/* *** */
+.switch_page {
+	/* Базовые стили */
+	padding: 12px 24px;
+	font-size: 16px;
+	font-weight: 500;
+	font-family: sans-serif;
+	cursor: pointer;
+	border: none;
+	border-radius: 8px; /* Мягкое скругление */
+
+	/* Цвет и фон */
+	background-color: #007aff; /* Фирменный синий */
+	color: white;
+
+	/* Эффект глубины и плавность */
+	transition: all 0.2s ease;
+	box-shadow:
+		0 4px 6px -1px rgba(0, 0, 0, 0.1),
+		0 2px 4px -1px rgba(0, 0, 0, 0.06);
+}
+
+/* Эффект при наведении */
+.switch_page:hover {
+	background-color: #0063cc;
+	transform: translateY(-1px); /* Легкий подъем */
+	box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+}
+
+/* Эффект при нажатии */
+.switch_page:active {
+	transform: translateY(0);
+	background-color: #0056b3;
+	box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Фокус для доступности (TAB) */
+.switch_page:focus {
+	outline: 2px solid #007aff;
+	outline-offset: 2px;
+}

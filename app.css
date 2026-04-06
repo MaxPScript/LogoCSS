@@ -30,21 +30,25 @@ body {
 }
 
 .slides {
-	display: flex;
+	/* display: flex; */
 	display: grid;
-	grid-template-columns: 1fr;
+	/* grid-template-columns: 1fr; */
 	/* place-items: center; */
 	/* grid-template-areas: "image"; */
-	transition: transform 0.5s ease;
+	transition: all 0.5s ease;
+	width: 30%;
+	margin: auto;
 }
 
 .slides img {
+	transition: all 0.5s ease;
 	grid-area: 1/1/2/2;
 	display: block;
-	width: 80%;
-	margin: auto;
-	flex-shrink: 0;
+	width: 100%;
+	/* margin: auto; */
+	/* flex-shrink: 0; */
 	pointer-events: none;
+	/* position: absolute; */
 }
 
 .nav {
