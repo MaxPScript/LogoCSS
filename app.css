@@ -22,6 +22,10 @@ body {
 		"Helvetica Neue",
 		sans-serif;
 }
+.keywords {
+	width: 85%;
+	margin: auto;
+}
 .slider {
 	position: relative;
 	/* max-width: 600px; */
@@ -58,7 +62,7 @@ body {
 	background: rgba(0, 0, 0, 0.5);
 	color: white;
 	border: none;
-	padding: 1em;
+	padding: 2em;
 	cursor: pointer;
 }
 
